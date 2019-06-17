@@ -13,7 +13,26 @@
             cursor: pointer;
             border: 1px solid black;
         }
-
+        td:hover{
+            background-color: orange;
+        }
+        .modal{
+            padding-top: 30px;
+            display: grid;
+            width: 20%;
+            height: 250px;
+            background-color: green;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            grid-template-columns: repeat(1, 90%);
+            justify-content: center;
+            grid-template-rows: 50px 50px 50px;
+            grid-row-gap: 30px;
+        }
+        .none{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -21,5 +40,10 @@
     <input type="button" value="next" id="nxt" />
     <div id="date"></div>
     <div id="calendar"></div>
+    <div class="modal none">
+        <input type="text" id="txt" placeholder="Enter the event"/>
+        <input type="button" value="Save" id="save" />
+        <input type="button" value="Cancel" id="cncl" />
+    </div>
 </body>
 </html>
